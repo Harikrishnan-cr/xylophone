@@ -26,20 +26,22 @@ class _XyloPhoneScreenState extends State<XyloPhoneScreen> {
   final assetsAudioPlayer = AssetsAudioPlayer();
 
 
- Widget clickingKeys(var value , double height, int song){
+ Widget clickingKeys(var value , int song){
 
-  return GestureDetector(
-    onTap: () {
-      assetsAudioPlayer.open(
-    Audio("assets/music/note$song.wav"),
-);
-    },
-              child: Container(
-                color: value,
-                width: double.infinity,
-                height: height,
+  return Expanded(
+    child: GestureDetector(
+      onTap: () {
+        assetsAudioPlayer.open(
+      Audio("assets/music/note$song.wav"),
+  );
+      },
+                child: Container(
+                  color: value,
+                  width: double.infinity,
+                 
+                ),
               ),
-            );
+  );
 
  }
   @override
@@ -59,13 +61,13 @@ class _XyloPhoneScreenState extends State<XyloPhoneScreen> {
         child: Column(
           children: [
             
-             clickingKeys(Colors.purple,heigh,1),
-             clickingKeys(const Color.fromARGB(255, 0, 0, 0),heigh,2),
-             clickingKeys(const Color.fromARGB(255, 55, 39, 176),heigh,3),
-             clickingKeys(const Color.fromARGB(255, 13, 190, 22),heigh,4),
-             clickingKeys(const Color.fromARGB(255, 70, 17, 3),heigh,5),
-             clickingKeys(const Color.fromARGB(255, 255, 60, 6),heigh,6),
-             clickingKeys(const Color.fromARGB(255, 8, 175, 187),heigh,7),
+             clickingKeys(Colors.purple,1),
+             clickingKeys(const Color.fromARGB(255, 0, 0, 0),2),
+             clickingKeys(const Color.fromARGB(255, 55, 39, 176),3),
+             clickingKeys(const Color.fromARGB(255, 13, 190, 22),4),
+             clickingKeys(const Color.fromARGB(255, 70, 17, 3),5),
+             clickingKeys(const Color.fromARGB(255, 255, 60, 6),6),
+             clickingKeys(const Color.fromARGB(255, 8, 175, 187),7),
             
           ],
         ),
