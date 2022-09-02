@@ -48,7 +48,7 @@ class _XyloPhoneScreenState extends State<XyloPhoneScreen> {
   Widget build(BuildContext context) {
      screenheight = MediaQuery.of(context).size.height;
     screenwidth = MediaQuery.of(context).size.width;
-    double heigh = screenheight*0.121;
+  
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
